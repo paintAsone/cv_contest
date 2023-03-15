@@ -129,7 +129,8 @@ test_generator = datagen.flow_from_directory(
 # modelName = 'modelv2.h5'
 
 # modelName = 'model3.h5'
-modelName = 'model3v2.h5'
+# modelName = 'model3v2.h5'
+modelName = 'model3v3.h5'
 
 # modelName = 'model4.h5'
 # modelName = 'model4v2.h5'

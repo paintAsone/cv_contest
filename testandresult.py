@@ -27,8 +27,9 @@ test_generator = datagen.flow_from_directory(
 # modelName = 'model2.h5' #acc = 0.7649
 # modelName = 'model2v2.h5' #acc = 0.7624
 
-# modelName = 'model3.h5' #acc = 0.0.7749
-modelName = 'model3v2.h5' #acc = 0.7674
+# modelName = 'model3.h5' #acc = 0.7749
+# modelName = 'model3v2.h5' #acc = 0.7674
+modelName = 'model3v3.h5' #acc = 0.8025
 
 # modelName = 'model4.h5' #acc = 0.7099
 # modelName = 'model4v2.h5' #acc = 0.7275

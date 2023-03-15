@@ -21,14 +21,14 @@ test_generator = datagen.flow_from_directory(
     color_mode='rgb',
     class_mode='categorical')
 
-modelName = 'model1.h5' #acc = 0.7625
+# modelName = 'model1.h5' #acc = 0.7625
 # modelName = 'model1v5.h5' #acc = 0.7699
 
 # modelName = 'model2.h5' #acc = 0.7649
 # modelName = 'model2v2.h5' #acc = 0.7624
 
-# modelName = 'model3.h5' #acc = 0.6750
-# modelName = 'model3v2.h5' #acc = 0.6499
+# modelName = 'model3.h5' #acc = 0.0.7749
+modelName = 'model3v2.h5' #acc = 0.7674
 
 # modelName = 'model4.h5' #acc = 0.7099
 # modelName = 'model4v2.h5' #acc = 0.7275
@@ -49,6 +49,7 @@ predict = model.predict_generator(
     use_multiprocessing=False)
 print('confidence:\n', predict)
 
+#print acc
 predict_class_idx = np.argmax(predict,axis = -1)
 print('predicted class index:\n', predict_class_idx)
 
@@ -60,16 +61,21 @@ cm = confusion_matrix(test_generator.classes, np.argmax(predict,axis = -1))
 print("Confusion Matrix:\n",cm)
 
 fclass = ['B','D','R','S']
-
 file = open("result.txt","w")
-n = 0
-for i in fclass:
-    path = './data/test/'+str(i)
-    # print(path)
-    filename = os.listdir(path)    
-    for f in filename:
-        file.write(f+":"+predict_class_name[n])
-        file.write('\n')
-        n+=1
+# n = 0
+# for i in fclass:
+#     path = './data/test/'+str(i)
+#     # print(path)
+#     filename = os.listdir(path)    
+#     for f in filename:
+#         file.write(f+":"+predict_class_name[n])
+#         file.write('\n')
+#         n+=1
+
+# write filenames
+filenames = test_generator.filenames
+for i in range(len(filenames)):
+    file.write(str(filenames[i])+":"+predict_class_name[i])
+    file.write('\n')
 
 file.close()

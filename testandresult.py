@@ -17,14 +17,14 @@ BATCH_SIZE = 50
 datagen = ImageDataGenerator(rescale=1/255.)
 
 # modelName = 'model1.h5' #acc = 0.7625
-# modelName = 'model1v5.h5' #acc = 0.7699
+# modelName = 'model1v2.h5' #acc = 0.7699
 
 # modelName = 'model2.h5' #acc = 0.7649
 # modelName = 'model2v2.h5' #acc = 0.7624
 
-# modelName = 'model3.h5' #acc = 0.7749
+modelName = 'model3.h5' #acc = 0.7749
 # modelName = 'model3v2.h5' #acc = 0.7674
-modelName = 'model3v3.h5' #acc = 0.8025
+# modelName = 'model3v3.h5' #acc = 0.8025
 
 # modelName = 'model4.h5' #acc = 0.7099
 # modelName = 'model4v2.h5' #acc = 0.7275

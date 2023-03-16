@@ -33,7 +33,7 @@ filename = os.listdir(PATHFILE)
 fclass = {0: 'B', 1:'D', 2:'R', 3:'S'}
 model = load_model(modelName)
 
-file = open("result2.txt","w")
+file = open("result.txt","w")
 for name in filename:
     test_im = cv2.imread(PATHFILE + "/" + name, cv2.IMREAD_COLOR)
     test_im = cv2.resize(test_im, (IM_SIZE,IM_SIZE))
